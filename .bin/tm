@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+# Lists, creates and attaches tmux sessions.
+if [[ "$1" == "" ]]; then
+  tmux list-sessions 2> /dev/null
+  if [[ $? != 0 ]]; then
+    echo no sessions
+  fi
+elif [[ "$1" == "-" ]]; then
+  tmux new-session -s $(basename `pwd`|sed 's/[[:punct:]]/-/g')
+elif [[ $# -gt 1  ]]; then
+  tmux $@
+else
+  tmux has-session -t "$1" &> /dev/null
+  if [[ $? == 0 ]]; then
+    tmux attach-session -t $1
+  else
+    tmux new-session -s $1
+  fi
+fi

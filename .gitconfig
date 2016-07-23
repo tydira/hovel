@@ -1,0 +1,16 @@
+[user]
+	name = Justin Krueger
+	email = justin@kroo.gs
+[core]
+	excludesfile = /Users/justin/.gitignore_global
+	quotepath = false
+[push]
+	default = simple
+[github]
+	user = kroogs
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
