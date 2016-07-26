@@ -25,4 +25,4 @@ vim +PlugInstall\! +GoUpdateBinaries +qa &&
 # Hovel
 alias hovel='git --git-dir=.hovel.git --work-tree=.' &&
 hovel config --local status.showUntrackedFiles no &&
-hovel submodule update --init
+hovel submodule update --init --recursive
