@@ -38,6 +38,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'valloric/youcompleteme', { 'do': './install.py' }
+Plug 'Raimondi/delimitMate'
 " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim'
 " Plug 'sirver/ultisnips' | Plug 'honza/vim-snippets'
