@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# Lists, creates and attaches tmux sessions.
+# Lists, creates, and attaches tmux sessions.
 if [[ "$1" == "" ]]; then
   tmux list-sessions 2> /dev/null
   if [[ $? != 0 ]]; then
