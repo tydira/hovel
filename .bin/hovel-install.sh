@@ -6,7 +6,7 @@ if [[ "`which brew`" == "" ]]; then
 fi
 
 brew update &&
-brew install node tmux tig vim weechat zsh tidy-html5 swiftlint &&
+brew install node tmux tig vim weechat zsh tidy-html5 swiftlint fzf &&
 brew upgrade &&
 
 # Python
