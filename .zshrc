@@ -31,9 +31,7 @@ export EDITOR=vim
 # Reset our tmux var for each shell so we can embed
 export TMUX=''
 
-export FLUKY_PATH="$HOME/.config/fluky"
-
-# Set the GOPATH only if it's not set
+# Set the GOPATH if it's not set
 [ -z "$GOPATH" ] && export GOPATH="$HOME/.config/go"
 export GOBIN="$HOME/.config/go/bin"
 
@@ -49,16 +47,9 @@ $PATH"
 
 # Useful aliases
 alias hovel='git --git-dir=$HOME/.hovel.git --work-tree=$HOME'
-alias mvp='mvim +CtrlP &>/dev/null'
-alias mvs='mvim -S .Session.vim &>/dev/null'
 alias v='nvim'
-alias vi='vim'
-alias vp='vim +CtrlP'
-alias vs='vim -S .Session.vim'
-alias ka='killall'
-alias bwd='basename `pwd`'
+alias vs='nvim -S .Session.vim'
 alias dsdie='find . -name .DS_Store -type f -exec rm {} \;'
-alias y='youtube-dl'
 alias g='git'
 alias gc='git commit'
 alias gl='git clone'
@@ -67,8 +58,6 @@ alias gb='git branch'
 alias gd='git diff'
 alias gp='git push'
 alias gst='git status'
-
-realpath() { for f in "$@"; do echo ${f}(:A); done }
 
 # Disable ^s and ^q binds
 stty start undef stop undef
