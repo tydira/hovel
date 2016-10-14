@@ -10,17 +10,16 @@ brew install node tmux tig vim weechat zsh tidy-html5 swiftlint &&
 brew upgrade &&
 
 # Python
-pip install --upgrade neovim flake8 &&
 pip3 install --upgrade neovim flake8 &&
 
 # Node
 npm update -g &&
-npm install -g coffee-script eslint babel-eslint eslint-plugin-react gulp tsd npm-check-updates &&
+npm install -g npm-check-updates &&
 npm upgrade -g &&
 
 # Vim
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &&
-vim +PlugInstall\! +GoUpdateBinaries +qa &&
+vim +PlugInstall +PlugUpdate +GoUpdateBinaries +qa &&
 
 # Hovel
 alias hovel='git --git-dir=.hovel.git --work-tree=.' &&
