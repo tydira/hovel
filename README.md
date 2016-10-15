@@ -19,5 +19,5 @@ git --git-dir=.hovel.git --work-tree=. checkout
 
 Install desired tools:
 ```shell
-source .bin/hovel-install.sh
+source .hovel-install.sh
 ```

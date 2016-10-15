@@ -6,11 +6,26 @@ if [[ "`which brew`" == "" ]]; then
 fi
 
 brew update &&
-brew install node tmux tig vim weechat zsh tidy-html5 swiftlint fzf &&
+brew upgrade &&
+brew install\
+  node\
+  tmux\
+  tig\
+  vim\
+  neovim/neovim/neovim\
+  weechat\
+  zsh\
+  tidy-html5\
+  swiftlint\
+  fzf\
+  &&
 brew upgrade &&
 
 # Python
-pip3 install --upgrade neovim flake8 &&
+pip3 install --upgrade\
+  neovim\
+  flake8\
+  &&
 
 # Node
 npm update -g &&
@@ -22,6 +37,9 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuserc
 vim +PlugInstall +PlugUpdate +GoUpdateBinaries +qa &&
 
 # Hovel
-alias hovel='git --git-dir=.hovel.git --work-tree=.' &&
-hovel config --local status.showUntrackedFiles no &&
+alias hovel
+if [ $? -ne 0 ]; then
+  alias hovel='git --git-dir=.hovel.git --work-tree=.'
+  hovel config --local status.showUntrackedFiles no
+fi
 hovel submodule update --init --recursive
