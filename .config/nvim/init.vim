@@ -24,9 +24,8 @@ Plug 'rking/ag.vim'
 " Plug 'valloric/youcompleteme', { 'do': './install.py' } replace with deoplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Raimondi/delimitMate'
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim'
-" Plug 'sirver/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'sirver/ultisnips' | Plug 'honza/vim-snippets'
 " Plug 'shougo/unite.vim'
 " Plug 'haya14busa/vim-asterisk'
 " Plug 'haya14busa/incsearch.vim'
