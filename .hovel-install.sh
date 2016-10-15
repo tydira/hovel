@@ -16,7 +16,6 @@ brew install\
   weechat\
   zsh\
   tidy-html5\
-  swiftlint\
   fzf\
   &&
 brew upgrade &&
@@ -34,12 +33,9 @@ npm upgrade -g &&
 
 # Vim
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &&
-vim +PlugInstall +PlugUpdate +GoUpdateBinaries +qa &&
+nvim +PlugInstall +PlugUpdate +GoUpdateBinaries +qa &&
 
 # Hovel
-alias hovel
-if [ $? -ne 0 ]; then
-  alias hovel='git --git-dir=.hovel.git --work-tree=.'
-  hovel config --local status.showUntrackedFiles no
-fi
+alias hovel='git --git-dir=.hovel.git --work-tree=.'
+hovel config --local status.showUntrackedFiles no
 hovel submodule update --init --recursive
