@@ -14,6 +14,7 @@ brew install\
   tig\
   vim\
   neovim/neovim/neovim\
+  the_silver_searcher\
   weechat\
   zsh\
   tidy-html5\
