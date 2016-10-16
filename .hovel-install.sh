@@ -8,6 +8,7 @@ fi
 brew update &&
 brew upgrade &&
 brew install\
+  python3\
   node\
   tmux\
   tig\
