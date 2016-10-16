@@ -1,8 +1,8 @@
 call plug#begin(expand('<sfile>:p:h') . '/plugins')
 
 " Configuration
-Plug '~/Projects/Code/vim-goshgolly'
-Plug '~/Projects/Code/vim-kroogs'
+Plug 'kroogs/vim-goshgolly'
+Plug 'kroogs/vim-kroogs'
 
 " Features
 Plug 'tpope/vim-commentary'
