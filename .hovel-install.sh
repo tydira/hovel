@@ -36,6 +36,7 @@ npm upgrade -g &&
 # Hovel
 alias hovel='git --git-dir=.hovel.git --work-tree=.'
 hovel config --local status.showUntrackedFiles no
+hovel update-index --assume-unchanged README.md && rm README.md &&
 hovel submodule update --init --recursive &&
 
 # Vim
