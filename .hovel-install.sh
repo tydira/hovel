@@ -33,11 +33,11 @@ npm update -g &&
 npm install -g npm-check-updates &&
 npm upgrade -g &&
 
-# Vim
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &&
-nvim +PlugInstall +PlugUpdate +GoUpdateBinaries +qa &&
-
 # Hovel
 alias hovel='git --git-dir=.hovel.git --work-tree=.'
 hovel config --local status.showUntrackedFiles no
-hovel submodule update --init --recursive
+hovel submodule update --init --recursive &&
+
+# Vim
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &&
+nvim +PlugInstall +PlugUpdate +GoUpdateBinaries +qa &&
