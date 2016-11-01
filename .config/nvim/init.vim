@@ -16,18 +16,19 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'neomake/neomake', { 'on': 'Neomake' }
 Plug 'lokaltog/vim-easymotion'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTree'] }
-Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Raimondi/delimitMate'
-" Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim'
-Plug 'sirver/ultisnips' | Plug 'honza/vim-snippets'
+" Plug 'mattn/gist-vim' | Plug 'mattn/webapi-vim'
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
 " Plug 'shougo/unite.vim'
 Plug 'haya14busa/vim-asterisk'
 Plug 'haya14busa/incsearch.vim'
 Plug 'gcmt/wildfire.vim'
-Plug 'maxbrunsfeld/vim-yankstack'
+" Plug 'maxbrunsfeld/vim-yankstack'
 
 " Languages / Frameworks / Platforms
 Plug 'moll/vim-node'
