@@ -26,10 +26,12 @@ plugins=(\
 source $ZSH/oh-my-zsh.sh
 
 # Of course.
-export EDITOR=vim
+export EDITOR=nvim
 
 # Reset our tmux var for each shell so we can embed
 export TMUX=''
+
+export NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 # Set the GOPATH if it's not set
 [ -z "$GOPATH" ] && export GOPATH="$HOME/.config/go"

@@ -17,7 +17,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'neomake/neomake', { 'on': 'Neomake' }
 Plug 'lokaltog/vim-easymotion'
 Plug 'scrooloose/nerdtree'
-" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Raimondi/delimitMate'
