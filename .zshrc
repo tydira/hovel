@@ -48,7 +48,7 @@ ${HOME}/.bin:\
 $PATH"
 
 # Useful aliases
-alias hovel='git --git-dir=$HOME/.hovel.git --work-tree=$HOME'
+alias hovel='git --git-dir=$HOME/.hovel/repo.git --work-tree=$HOME'
 alias v='nvim'
 alias vs='nvim -S .Session.vim'
 alias dsdie='find . -name .DS_Store -type f -exec rm {} \;'
