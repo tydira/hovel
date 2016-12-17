@@ -24,6 +24,7 @@ brew upgrade &&
 
 # Python
 pip3 install --upgrade\
+  pip\
   neovim\
   flake8\
   &&
@@ -34,9 +35,9 @@ npm install -g npm-check-updates &&
 npm upgrade -g &&
 
 # Hovel
-alias hovel='git --git-dir=.hovel.git --work-tree=.'
+alias hovel="git --git-dir=$HOME/.hovel/repo.git --work-tree=$HOME"
 hovel config --local status.showUntrackedFiles no
-hovel update-index --assume-unchanged README.md && rm README.md &&
+hovel update-index --assume-unchanged README.md && mv README.md ~/.hovel/ &&
 hovel submodule update --init --recursive &&
 
 # Vim
