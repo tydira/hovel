@@ -21,10 +21,10 @@ git --git-dir=$HOME/.hovel/repo.git --work-tree=$HOME checkout
 > files and run the command again. If you're sure it's safe, adding a ```-f``` switch
 > will overwrite them.
 
-Finish setup and install desired tools:
+Install desired tools:
 
 ```shell
-source ~/.hovel/setup.sh
+source ~/.hovel/install.sh
 ```
 
 Finally, change your shell to zsh. There's now a hovel command
