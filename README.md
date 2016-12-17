@@ -9,7 +9,7 @@ Dotfiles et al.
 Clone to a bare repo in ~/.hovel/repo.git
 
 ```shell
-git clone --bare git@github.com:kroogs/hovel.git ~/.hovel/repo.git
+git clone --bare git@github.com:kroogs/hovel.git $HOME/.hovel/repo.git
 ```
 
 Checkout the contents of the bare repo:
