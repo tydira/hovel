@@ -41,8 +41,7 @@ Since it's just git, you can pull in changes made to origin.
 hovel pull
 ```
 
-You can also re-run the installation script to update apps
-(previously ran by ~/.hovel/setup.sh).
+You can also re-run the installation script to update apps.
 ```shell
 source ~/.hovel/install.sh
 ```
