@@ -10,6 +10,7 @@ brew upgrade &&
 brew install\
   python3\
   node\
+  yarn\
   tmux\
   tig\
   vim\
