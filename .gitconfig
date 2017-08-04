@@ -6,5 +6,8 @@
 	quotepath = false
 [push]
 	default = simple
+[color "branch"]
+  local = green
+  remote = magenta
 [github]
 	user = kroogs
