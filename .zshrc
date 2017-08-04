@@ -50,6 +50,7 @@ $PATH"
 # Useful aliases
 alias hovel='git --git-dir=$HOME/.hovel/repo.git --work-tree=$HOME'
 alias v='nvim'
+alias vim='nvim'
 alias vs='nvim -S .Session.vim'
 alias dsdie='find . -name .DS_Store -type f -exec rm {} \;'
 alias g='git'
