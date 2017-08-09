@@ -49,6 +49,7 @@ $PATH"
 
 # Useful aliases
 alias hovel='git --git-dir=$HOME/.hovel/repo.git --work-tree=$HOME'
+alias ls='exa'
 alias v='nvim'
 alias vim='nvim'
 alias vs='nvim -S .Session.vim'
@@ -60,7 +61,7 @@ alias gh='git checkout'
 alias gb='git branch'
 alias gd='git diff'
 alias gp='git push'
-alias gst='git status'
+alias gs='git status'
 
 # Disable ^s and ^q binds
 stty start undef stop undef
@@ -81,3 +82,15 @@ unsetopt share_history
 bindkey '^[[Z' reverse-menu-complete
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+capture-enter () {
+  if [[ -z $BUFFER ]]
+  then
+    echo
+    exa
+  else
+    zle accept-line
+  fi
+}
+zle -N capture-enter
+bindkey "^M" capture-enter

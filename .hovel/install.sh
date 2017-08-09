@@ -5,10 +5,16 @@ if [[ "`which brew`" == "" ]]; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# Rust
+if [[ "`which rustc`" == "" ]]; then
+  curl https://sh.rustup.rs -sSf | sh
+fi
+
 brew update &&
 brew upgrade &&
 brew install\
   python3\
+  exa
   node\
   yarn\
   tmux\

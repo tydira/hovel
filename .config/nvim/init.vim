@@ -14,6 +14,7 @@ Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'junegunn/vim-easy-align'
 Plug 'neomake/neomake', { 'on': 'Neomake' }
 Plug 'lokaltog/vim-easymotion'
 Plug 'scrooloose/nerdtree'
@@ -32,12 +33,12 @@ Plug 'gcmt/wildfire.vim'
 Plug 'sbdchd/neoformat'
 
 " Languages / Frameworks / Platforms
-Plug 'moll/vim-node', { 'for': 'javascript' }
-" Plug 'flowtype/vim-flow', { 'for': 'javascript', 'do': 'npm install -g flow-bin' }
-Plug 'carlitux/deoplete-ternjs', { 'for': 'javascript', 'do': 'npm install -g tern' }
-Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
-Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
+Plug 'moll/vim-node'
+" Plug 'flowtype/vim-flow', { 'do': 'npm install -g flow-bin' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sheerun/vim-polyglot'
+Plug 'sebastianmarkow/deoplete-rust'
 " Plug 'vim-scripts/django.vim'
 " Plug 'zchee/deoplete-jedi'
 " Plug 'zchee/deoplete-go'
