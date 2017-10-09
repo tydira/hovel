@@ -14,10 +14,11 @@ DISABLE_AUTO_UPDATE=true
 plugins=(\
   osx\
   npm\
+  rust\
   pip\
   django\
   vi-mode\
-  colored-man\
+  colored-man-pages\
   history-substring-search\
   zsh-syntax-highlighting\
 )
@@ -28,9 +29,7 @@ source $ZSH/oh-my-zsh.sh
 # Of course.
 export EDITOR=nvim
 
-# Reset our tmux var for each shell so we can embed
-export TMUX=''
-
+# Bar shaped input cursor.
 export NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 # Set the GOPATH if it's not set
@@ -40,11 +39,12 @@ export GOBIN="$HOME/.config/go/bin"
 # Add a bunch of crap to PATH
 export PATH="\
 $GOPATH/bin:\
-${HOME}/.bin:\
+$HOME/.bin:\
 /usr/local/opt/go/libexec/bin:\
 ./node_modules/.bin:\
 /usr/local/bin:\
 /Applications/Postgres.app/Contents/Versions/9.3/bin:\
+$HOME/.cargo/bin:\
 $PATH"
 
 # Useful aliases
@@ -52,7 +52,7 @@ alias hovel='git --git-dir=$HOME/.hovel/repo.git --work-tree=$HOME'
 alias ls='exa'
 alias v='nvim'
 alias vim='nvim'
-alias vs='nvim -S .Session.vim'
+alias vs='nvim -S Session.vim'
 alias dsdie='find . -name .DS_Store -type f -exec rm {} \;'
 alias g='git'
 alias gc='git commit'
@@ -94,3 +94,5 @@ capture-enter () {
 }
 zle -N capture-enter
 bindkey "^M" capture-enter
+
+eval $(thefuck --alias)
