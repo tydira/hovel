@@ -15,7 +15,8 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'junegunn/vim-easy-align'
-Plug 'neomake/neomake', { 'on': 'Neomake' }
+" Plug 'neomake/neomake', { 'on': 'Neomake' }
+Plug 'w0rp/ale'
 Plug 'lokaltog/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -31,6 +32,8 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'gcmt/wildfire.vim'
 " Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'sbdchd/neoformat'
+Plug 'olical/vim-enmasse'
+Plug 'chrisbra/Colorizer'
 
 " Languages / Frameworks / Platforms
 Plug 'moll/vim-node'
@@ -38,7 +41,7 @@ Plug 'moll/vim-node'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sheerun/vim-polyglot'
-Plug 'sebastianmarkow/deoplete-rust'
+" Plug 'sebastianmarkow/deoplete-rust'
 " Plug 'vim-scripts/django.vim'
 " Plug 'zchee/deoplete-jedi'
 " Plug 'zchee/deoplete-go'
