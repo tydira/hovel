@@ -6,7 +6,7 @@ if [[ "`which brew`" == "" ]]; then
 fi
 
 # Rust
-if [[ "`which rustc`" == "" ]]; then
+if [[ "`which rustup`" == "" ]]; then
   curl https://sh.rustup.rs -sSf | sh
 fi
 
