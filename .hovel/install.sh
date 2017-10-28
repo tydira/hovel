@@ -14,7 +14,7 @@ brew update &&
 brew upgrade &&
 brew install\
   python3\
-  exa
+  exa\
   node\
   yarn\
   tmux\
