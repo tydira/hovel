@@ -20,11 +20,14 @@ Plug 'lokaltog/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2-tmux'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-bufword'
 Plug 'Raimondi/delimitMate'
-" Plug 'mattn/gist-vim' | Plug 'mattn/webapi-vim'
-" Plug 'sirver/ultisnips'
-" Plug 'honza/vim-snippets'
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'haya14busa/vim-asterisk'
 Plug 'haya14busa/incsearch.vim'
 Plug 'gcmt/wildfire.vim'
@@ -32,16 +35,20 @@ Plug 'gcmt/wildfire.vim'
 Plug 'sbdchd/neoformat'
 Plug 'olical/vim-enmasse'
 Plug 'chrisbra/Colorizer'
+Plug 'airblade/vim-gitgutter'
 
 " Languages / Frameworks / Platforms
-Plug 'moll/vim-node'
-" Plug 'flowtype/vim-flow', { 'do': 'npm install -g flow-bin' }
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'moll/vim-node', { 'for': 'javascript' }
+Plug 'ncm2/ncm2-tern', { 'for': 'javascript', 'do': 'npm install' }
+Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
+Plug 'ncm2/ncm2-racer'
+Plug 'ncm2/ncm2-jedi', { 'for': 'python' }
 Plug 'sheerun/vim-polyglot'
-" Plug 'sebastianmarkow/deoplete-rust'
+" Plug 'hail2u/vim-css3-syntax'
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+" Plug 'flowtype/vim-flow', { 'do': 'npm install -g flow-bin', 'for': 'javascript' }
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Plug 'vim-scripts/django.vim'
-" Plug 'zchee/deoplete-jedi'
-" Plug 'zchee/deoplete-go'
 
 call plug#end()
