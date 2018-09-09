@@ -10,22 +10,35 @@ if [[ "`which rustup`" == "" ]]; then
   curl https://sh.rustup.rs -sSf | sh
 fi
 
+rustup update
+rustup install nightly
+
+if [[ "`which rustfmt`" == "" ]]; then
+  rustup run nightly cargo install rustfmt-nightly
+fi
+
+if [[ "`which racer`" == "" ]]; then
+  rustup run stable cargo install racer
+  rustup component add rust-src
+fi
+
 brew update &&
 brew upgrade &&
 brew install\
-  python3\
   exa\
-  node\
-  yarn\
-  tmux\
-  tig\
-  vim\
-  neovim/neovim/neovim\
-  the_silver_searcher\
-  weechat\
-  zsh\
-  tidy-html5\
   fzf\
+  fd\
+  ripgrep\
+  neovim\
+  node\
+  python3\
+  the_silver_searcher\
+  tidy-html5\
+  tig\
+  tmux\
+  weechat\
+  yarn\
+  fish\
   &&
 brew upgrade &&
 
