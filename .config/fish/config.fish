@@ -1,8 +1,11 @@
+fish_vi_key_bindings
+
+set fish_user_paths $HOME/.bin $HOME/.cargo/bin
+set fish_greeting
+
 set -x EDITOR nvim
 set -x RUST_SRC_PATH (rustc --print sysroot)/lib/rustlib/src/rust/src/
-# set -x LIBRARY_PATH /usr/local/lib
 
-# Useful aliases
 alias hovel='git --git-dir=$HOME/.hovel/repo.git --work-tree=$HOME'
 alias ls='exa'
 
