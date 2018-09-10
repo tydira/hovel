@@ -1,4 +1,5 @@
 fish_vi_key_bindings
+eval (ssh-agent -c) > /dev/null
 
 set fish_user_paths $HOME/.bin $HOME/.cargo/bin
 set fish_greeting
