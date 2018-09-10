@@ -1,23 +1,23 @@
 #!/usr/bin/env sh
 
 # Homebrew
-if [[ "`which brew`" == "" ]]; then
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if [ -n `which brew` ]; then
+  ruby -e "`curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install`"
 fi
 
 # Rust
-if [[ "`which rustup`" == "" ]]; then
+if [ -n `which rustup` ]; then
   curl https://sh.rustup.rs -sSf | sh
 fi
 
 rustup update
 rustup install nightly
 
-if [[ "`which rustfmt`" == "" ]]; then
+if [ -n `which rustfmt` ]; then
   rustup run nightly cargo install rustfmt-nightly
 fi
 
-if [[ "`which racer`" == "" ]]; then
+if [ -n `which racer` ]; then
   rustup run stable cargo install racer
   rustup component add rust-src
 fi
