@@ -1,6 +1,6 @@
 fish_vi_key_bindings
 
-set fish_user_paths $HOME/.bin $HOME/.cargo/bin $HOME/.local/bin
+set fish_user_paths $HOME/.cargo/bin $HOME/.local/bin
 set fish_greeting
 
 set -x EDITOR nvim
