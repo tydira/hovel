@@ -17,14 +17,15 @@ doas pkg install\
   fish\
   python36\
   py36-pip\
-  weechat\
-&&
+  weechat
 
 pip-3.6 install --user --upgrade\
   pip\
   neovim\
-  flake8\
-&&
+  flake8
+
+npm config prefix ~/.local
+npm install -g npm-check-updates
 
 if [ -n `which rustup` ]; then
   curl https://sh.rustup.rs -sSf | sh
