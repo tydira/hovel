@@ -25,7 +25,7 @@ pip-3.6 install --user --upgrade\
   flake8
 
 npm config prefix ~/.local
-npm install -g npm-check-updates
+npm install -g npm-check-updates eslint prettier
 
 if [ -n `which rustup` ]; then
   curl https://sh.rustup.rs -sSf | sh
