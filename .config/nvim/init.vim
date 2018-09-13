@@ -19,7 +19,7 @@ Plug 'w0rp/ale'
 Plug 'lokaltog/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2-tmux'
@@ -38,12 +38,12 @@ Plug 'chrisbra/Colorizer'
 Plug 'airblade/vim-gitgutter'
 
 " Languages / Frameworks / Platforms
-Plug 'moll/vim-node', { 'for': 'javascript' }
-Plug 'ncm2/ncm2-tern', { 'for': 'javascript', 'do': 'npm install' }
+Plug 'moll/vim-node'
+Plug 'ncm2/ncm2-tern', { 'do': 'npm install' }
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 Plug 'ncm2/ncm2-racer'
-Plug 'ncm2/ncm2-jedi', { 'for': 'python' }
+Plug 'ncm2/ncm2-jedi'
 Plug 'sheerun/vim-polyglot'
 " Plug 'hail2u/vim-css3-syntax'
 " Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
