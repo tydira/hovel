@@ -17,17 +17,17 @@ Checkout the contents of the bare repo:
 ```shell
 git --git-dir=$HOME/.hovel/repo.git --work-tree=$HOME checkout 
 ```
-> This will error if it attempts to overwrite files. Backup or remove the offending
+> This will error if it attempts to overwrite files. Backup and remove the offending
 > files and run the command again. If you're sure it's safe, adding a ```-f``` switch
 > will overwrite them.
 
-Install desired tools:
+There are several install shell scripts for different platforms, for example:
 
 ```shell
-source ~/.hovel/install.sh
+. ~/.hovel/install-freebsd.sh
 ```
 
-Finally, change your shell to zsh. There's now a hovel command
+Finally, change your shell to fish. There's now a hovel command
 (an alias to git) with which to version any file in $HOME.
 
 ```shell
@@ -36,12 +36,14 @@ hovel help
 
 ## Updating
 
-Since it's just git, you can pull in changes made to origin.
+Since it's just git, you can add, commit, and push any file in $HOME:
 ```shell
-hovel pull
+hovel add .profile
+hovel commit .profile -m "Add my spiffy .profile"
+hovel push
 ```
 
-You can also re-run the installation script to update apps.
+You can also pull in changes made to remote repositories.
 ```shell
-source ~/.hovel/install.sh
+hovel pull
 ```
