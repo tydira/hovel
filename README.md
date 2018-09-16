@@ -24,7 +24,7 @@ git --git-dir=$HOME/.hovel/repo.git --work-tree=$HOME checkout
 There are several install shell scripts for different platforms, for example:
 
 ```shell
-source ~/.hovel/install-freebsd.sh
+. ~/.hovel/install-freebsd.sh
 ```
 
 Finally, change your shell to fish. There's now a hovel command
