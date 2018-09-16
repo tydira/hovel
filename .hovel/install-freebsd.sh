@@ -24,33 +24,35 @@ pip-3.6 install --user --upgrade\
   neovim\
   flake8
 
-npm config prefix ~/.local
+npm config set prefix ~/.local
 npm install -g npm-check-updates eslint prettier
 
-if [ -n `which rustup` ]; then
+if [ -z `which rustup` ]; then
   curl https://sh.rustup.rs -sSf | sh
 fi
+
+. $HOME/.cargo/env
 
 rustup update
 rustup install nightly
 
-if [ -n `which rustfmt` ]; then
+if [ -z `which rustfmt` ]; then
   rustup run nightly cargo install rustfmt-nightly
 fi
 
-if [ -n `which racer` ]; then
+if [ -z `which racer` ]; then
   rustup run nightly cargo install racer
   rustup component add rust-src
 fi
 
-if [ -n `which exa` ]; then
+if [ -z `which exa` ]; then
   cargo install exa
 fi
 
-if [ -n `which fd-find` ]; then
+if [ -z `which fd-find` ]; then
   cargo install fd-find
 fi
 
-if [ -n `which ripgrep` ]; then
+if [ -z `which ripgrep` ]; then
   cargo install ripgrep
 fi
