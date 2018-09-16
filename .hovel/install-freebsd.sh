@@ -25,7 +25,12 @@ pip-3.6 install --user --upgrade\
   flake8
 
 npm config set prefix ~/.local
-npm install -g npm-check-updates eslint prettier
+npm install -g\
+  npm\
+  yarn\
+  npm-check-updates\
+  eslint\
+  prettier
 
 if [ -z `which rustup` ]; then
   curl https://sh.rustup.rs -sSf | sh
@@ -56,3 +61,6 @@ fi
 if [ -z `which ripgrep` ]; then
   cargo install ripgrep
 fi
+
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &&
+nvim +PlugInstall +PlugUpdate +GoUpdateBinaries +qa
