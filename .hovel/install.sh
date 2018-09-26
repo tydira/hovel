@@ -15,7 +15,7 @@ fi
 os=`uname -s | awk '{print tolower($0)}'`
 install=$HOME/.hovel/install-$os.sh
 
-if [ -n $install ]; then
+if [ -e $install ]; then
   echo "Running $install" && sleep 3
   sh $install
 

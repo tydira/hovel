@@ -17,7 +17,11 @@ doas pkg install\
   py36-pip\
   weechat
 
-pip-3.6 install --user --upgrade\
+if [ -z `which pip` ]; then
+  alias pip="pip-3.6"
+fi
+
+pip install --user --upgrade\
   pip\
   virtualenv\
   neovim\
