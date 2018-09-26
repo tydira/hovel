@@ -14,6 +14,7 @@ alias vim='nvim'
 alias vs='nvim -S Session.vim'
 
 alias g='git'
+alias ga='git add'
 alias gc='git commit'
 alias gl='git clone'
 alias gh='git checkout'
