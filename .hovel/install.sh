@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
 
 cd $HOME
-
 alias hovel="git --git-dir=.hovel/repo.git --work-tree=."
 
 hovel config --local status.showUntrackedFiles no
