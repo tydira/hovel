@@ -21,6 +21,7 @@ doas pkg install\
 
 pip-3.6 install --user --upgrade\
   pip\
+  virtualenv\
   neovim\
   flake8
 
