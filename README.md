@@ -12,38 +12,20 @@ Clone to a bare repo in $HOME/.hovel/repo.git:
 git clone --bare git@github.com:kroogs/hovel.git $HOME/.hovel/repo.git
 ```
 
-Create a temporary helper alias:
+Checkout the bare repo's contents:
 
 ```shell
-alias hovel="git --git-dir=$HOME/.hovel/repo.git --work-tree=$HOME"
-```
-
-Checkout the bare repo:
-
-```shell
-hovel checkout 
+git --git-dir=$HOME/.hovel/repo.git --work-tree=$HOME checkout 
 ```
 
 > This will error if it attempts to overwrite files. Backup and remove the offending
 > files and run the command again. If you're sure it's safe, adding an ```-f``` switch
 > will overwrite them.
 
-Initialize submodules:
+Run the generic install.sh script:
 
 ```shell
-hovel submodule update --init
-```
-
-There are several install shell scripts for different platforms, for example:
-
-```shell
-. ~/.hovel/install-freebsd.sh
-```
-
-Finally, change your shell (to fish, in this case):
-
-```shell
-chsh -s /usr/local/bin/fish
+sh $HOME/.hovel/install.sh
 ```
 
 ## Updating
