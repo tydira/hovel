@@ -24,6 +24,7 @@ pip-3.6 install --user --upgrade\
   flake8
 
 npm config set prefix ~/.local
+npm update -g
 npm install -g\
   npm\
   yarn\
