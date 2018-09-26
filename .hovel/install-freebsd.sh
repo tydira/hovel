@@ -1,8 +1,5 @@
 #!/usr/bin/env sh
 
-# Tools not installed yet.
-# fzf, the_silver_searcher tidy-html5 tig yarn
-
 if [ -z `which doas` ]; then
   echo "This script uses doas and pkg to install tools."
   exit 1
@@ -15,6 +12,7 @@ doas pkg install\
   neovim\
   tmux\
   fish\
+  fzf\
   python36\
   py36-pip\
   weechat
