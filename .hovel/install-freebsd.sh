@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 if [ -z `which doas` ]; then
-  echo "This script uses doas and pkg to install tools."
+  echo "This script requires \`doas\` to install some tools."
   exit 1
 fi
 
@@ -23,7 +23,7 @@ pip-3.6 install --user --upgrade\
   neovim\
   flake8
 
-npm config set prefix ~/.local
+npm config set prefix $HOME/.local
 npm update -g
 npm install -g\
   npm\
@@ -40,27 +40,25 @@ fi
 
 rustup update
 rustup install nightly
+rustup component add rust-src
+rustup run nightly cargo install --force\
+  rustfmt-nightly\
+  racer
 
-if [ -z `which rustfmt` ]; then
-  rustup run nightly cargo install rustfmt-nightly
+cargo install --force\
+  fd-find\
+  ripgrep
+  exa\
+
+tdr=$HOME/.tmux/plugins/tpm/bin
+$tdr/install_plugins
+$tdr/update_plugins all
+$tdr/clean_plugins
+
+nvd=$HOME/.config/nvim
+if [ ! -d $nvd/autoload ]; then
+  mkdir -p $nvd/autoload
+  ln -s $nvd/vim-plug/plug.vim $nvd/autoload/
 fi
 
-if [ -z `which racer` ]; then
-  rustup run nightly cargo install racer
-  rustup component add rust-src
-fi
-
-if [ -z `which exa` ]; then
-  cargo install exa
-fi
-
-if [ -z `which fd-find` ]; then
-  cargo install fd-find
-fi
-
-if [ -z `which ripgrep` ]; then
-  cargo install ripgrep
-fi
-
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &&
 nvim +PlugInstall +PlugUpdate +GoUpdateBinaries +qa
