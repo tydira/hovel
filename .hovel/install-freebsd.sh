@@ -47,18 +47,18 @@ rustup run nightly cargo install --force\
 
 cargo install --force\
   fd-find\
-  ripgrep
-  exa\
+  ripgrep\
+  exa
 
-tdr=$HOME/.tmux/plugins/tpm/bin
-$tdr/install_plugins
-$tdr/update_plugins all
-$tdr/clean_plugins
+tpm=$HOME/.tmux/plugins/tpm/bin
+$tpm/install_plugins
+$tpm/update_plugins all
+$tpm/clean_plugins
 
-nvd=$HOME/.config/nvim
-if [ ! -d $nvd/autoload ]; then
-  mkdir -p $nvd/autoload
-  ln -s $nvd/vim-plug/plug.vim $nvd/autoload/
+nv=$HOME/.config/nvim
+if [ ! -d $nv/autoload ]; then
+  mkdir -p $nv/autoload
+  ln -s $nv/vim-plug/plug.vim $nv/autoload/
 fi
 
 nvim +PlugInstall +PlugUpdate +GoUpdateBinaries +qa
