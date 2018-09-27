@@ -15,8 +15,8 @@ brew install\
   fish\
   weechat
 
-. ./python
-. ./node
-. ./rust
-. ./tmux
-. ./neovim
+. ./python.sh
+. ./node.sh
+. ./rust.sh
+. ./tmux.sh
+. ./neovim.sh

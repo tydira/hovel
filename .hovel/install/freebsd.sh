@@ -19,8 +19,8 @@ if [ -z `which pip` ]; then
   alias pip="pip-3.6"
 fi
 
-. ./python
-. ./node
-. ./rust
-. ./tmux
-. ./neovim
+. ./python.sh
+. ./node.sh
+. ./rust.sh
+. ./tmux.sh
+. ./neovim.sh
