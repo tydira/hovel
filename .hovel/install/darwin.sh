@@ -12,8 +12,8 @@ brew install\
   neovim\
   tmux\
   fzf\
-  fish
-  weechat\
+  fish\
+  weechat
 
 . ./python
 . ./node
