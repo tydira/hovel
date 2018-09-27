@@ -37,7 +37,12 @@ hovel commit .profile -m "Add my spiffy example .profile"
 hovel push
 ```
 
-You can also pull in changes made to remote repositories.
+You can pull in changes made to remote repositories:
 ```shell
 hovel pull
+```
+
+You can also use branches to make adjustments for different environments:
+```shell
+hovel checkout -b machine-name
 ```
