@@ -15,8 +15,14 @@ brew install\
   fish\
   weechat
 
-. ./python.sh
-. ./node.sh
-. ./rust.sh
-. ./tmux.sh
-. ./neovim.sh
+if [ -z `which pip` ]; then
+  alias pip="pip3"
+fi
+
+install=$HOME/.hovel/install/
+
+. $install/python.sh
+. $install/node.sh
+. $install/rust.sh
+. $install/tmux.sh
+. $install/neovim.sh

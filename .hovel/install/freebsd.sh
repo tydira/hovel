@@ -19,8 +19,10 @@ if [ -z `which pip` ]; then
   alias pip="pip-3.6"
 fi
 
-. ./python.sh
-. ./node.sh
-. ./rust.sh
-. ./tmux.sh
-. ./neovim.sh
+install=$HOME/.hovel/install/
+
+. $install/python.sh
+. $install/node.sh
+. $install/rust.sh
+. $install/tmux.sh
+. $install/neovim.sh
