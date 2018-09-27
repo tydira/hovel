@@ -12,12 +12,14 @@ if [ -e README.md ]; then
 fi
 
 os=`uname -s | awk '{print tolower($0)}'`
-install=$HOME/.hovel/install-$os.sh
+install=$HOME/.hovel/install/$os.sh
 
 if [ -e $install ]; then
-  echo "Running $install" && sleep 3
+  echo "Running '$install'..." && sleep 5
   sh $install
 
-  echo "Changing shell to /usr/local/bin/fish" && sleep 3
+  echo "Changing shell to '/usr/local/bin/fish'"
   chsh -s /usr/local/bin/fish
+else
+  echo "Couldn't find '$install' to run"
 fi
