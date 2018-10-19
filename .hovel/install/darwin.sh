@@ -7,6 +7,7 @@ fi
 brew update
 brew upgrade
 brew install\
+  cmake\
   python3\
   node\
   neovim\
