@@ -43,10 +43,7 @@ Plug 'racer-rust/vim-racer'
 Plug 'ncm2/ncm2-racer'
 Plug 'ncm2/ncm2-jedi'
 Plug 'sheerun/vim-polyglot'
-" Plug 'hail2u/vim-css3-syntax'
-" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-" Plug 'flowtype/vim-flow', { 'do': 'npm install -g flow-bin', 'for': 'javascript' }
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-" Plug 'vim-scripts/django.vim'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 
 call plug#end()
