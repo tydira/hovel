@@ -1,3 +1,13 @@
+dynamic_title: true
+hide_cursor_when_typing: true
+cursor_style: Block
+unfocused_hollow_cursor: true
+live_config_reload: true
+render_timer: false
+background_opacity: 0.965
+custom_cursor_colors: false
+tabspaces: 8
+
 env:
   TERM: xterm-256color
 
@@ -7,14 +17,15 @@ window:
     lines: 24
 
   padding:
-    x: 3
-    y: 3
+    x: 6
+    y: 6
 
-  decorations: true
+  decorations: full
 
-tabspaces: 8
-
-draw_bold_text_with_bright_colors: false
+scrolling:
+  history: 0
+  faux_multiplier: 0
+  auto_scroll: false
 
 font:
   normal:
@@ -32,27 +43,21 @@ font:
   size: 14.0
 
   offset:
-    x: 0.0
-    y: 0.0
+    x: 0
+    y: 0
 
   glyph_offset:
-    x: 0.0
-    y: 0.0
+    x: 0
+    y: 0
+
+  scale_with_dpi: true
 
   use_thin_strokes: true
-
-render_timer: false
-
-custom_cursor_colors: false
 
 colors:
   primary:
     background: '0x151515'
     foreground: '0xafafaf'
-
-  cursor:
-    text: '0x000000'
-    cursor: '0xffffff'
 
   normal:
     black:   '0x000000'
@@ -60,9 +65,9 @@ colors:
     green:   '0x9ce12e'
     yellow:  '0xffe61d'
     blue:    '0x679aff'
-    magenta: '0xc397d8'
+    magenta: '0xf94d94'
     cyan:    '0x00b9b9'
-    white:   '0xb5b5b5'
+    white:   '0xafafaf'
 
   bright:
     black:   '0x535353'
@@ -70,14 +75,12 @@ colors:
     green:   '0xeafc9b'
     yellow:  '0xfcf298'
     blue:    '0xc9e1ff'
-    magenta: '0xc5a9fd'
+    magenta: '0xd96c92'
     cyan:    '0x6ebfbe'
     white:   '0xffffff'
 
 visual_bell:
   duration: 0
-
-background_opacity: 1.0
 
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
@@ -88,19 +91,15 @@ mouse:
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
-
-dynamic_title: true
-
-hide_cursor_when_typing: true
-
-cursor_style: Block
-
-live_config_reload: false
+  save_to_clipboard: false
 
 key_bindings:
   - { key: Space,    mods: Control, chars: "\x1b"                        }
   - { key: V,        mods: Command, action: Paste                        }
   - { key: C,        mods: Command, action: Copy                         }
+  - { key: Paste,                   action: Paste                        }
+  - { key: Copy,                    action: Copy                         }
+  - { key: H,        mods: Command, action: Hide                         }
   - { key: Q,        mods: Command, action: Quit                         }
   - { key: W,        mods: Command, action: Quit                         }
   - { key: Home,                    chars: "\x1bOH",   mode: AppCursor   }
@@ -110,6 +109,8 @@ key_bindings:
   - { key: Key0,     mods: Command, action: ResetFontSize                }
   - { key: Equals,   mods: Command, action: IncreaseFontSize             }
   - { key: Minus,    mods: Command, action: DecreaseFontSize             }
+  - { key: K,        mods: Command, action: ClearHistory                 }
+  - { key: K,        mods: Command, chars: "\x0c"                        }
   - { key: PageUp,   mods: Shift,   chars: "\x1b[5;2~"                   }
   - { key: PageUp,   mods: Control, chars: "\x1b[5;5~"                   }
   - { key: PageUp,                  chars: "\x1b[5~"                     }
@@ -201,3 +202,4 @@ key_bindings:
   - { key: F10,      mods: Command, chars: "\x1b[21;3~"                  }
   - { key: F11,      mods: Command, chars: "\x1b[23;3~"                  }
   - { key: F12,      mods: Command, chars: "\x1b[24;3~"                  }
+  - { key: NumpadEnter,             chars: "\n"                          }
