@@ -17,7 +17,8 @@ if [ ! $? ]; then
   eval `ssh-agent`
 fi
 
-if [ -n $1 ]; then
+echo $1
+if [ -n "$1" ]; then
   script=$1
 else
   script=`uname -s | awk '{print tolower($0)}'`
