@@ -1,7 +1,15 @@
 #!/usr/bin/env sh
 
-if [ -z `which rustup` ]; then
-  curl https://sh.rustup.rs -sSf | sh
+url=https://sh.rustup.rs
+
+which rustup
+if [ ! $? ]; then
+  which curl
+  if [ $? ]; then
+    curl $url -sSf | sh
+  else
+    wget -qO- $url | sh
+  fi
 fi
 
 . $HOME/.cargo/env
@@ -9,6 +17,7 @@ fi
 rustup update
 rustup install nightly
 rustup component add rust-src
+
 rustup run nightly cargo install --force\
   rustfmt-nightly\
   racer

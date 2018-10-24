@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 
-nv=$HOME/.config/nvim
-if [ ! -d $nv/autoload ]; then
-  mkdir -p $nv/autoload
-  ln -s $nv/vim-plug/plug.vim $nv/autoload/
+nvc=$HOME/.config/nvim
+if [ ! -d $nvc/autoload ]; then
+  mkdir -p $nvc/autoload
+  ln -s $nvc/vim-plug/plug.vim $nvc/autoload/
 fi
 
 nvim +PlugInstall +PlugUpdate +GoUpdateBinaries +qa

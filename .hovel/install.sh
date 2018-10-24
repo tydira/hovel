@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 cd $HOME
+
 alias hovel="git --git-dir=.hovel/repo.git --work-tree=."
 
 hovel config --local status.showUntrackedFiles no
@@ -11,15 +12,30 @@ if [ -e README.md ]; then
   mv README.md .hovel/
 fi
 
-os=`uname -s | awk '{print tolower($0)}'`
-install=$HOME/.hovel/install/$os.sh
+pgrep ssh-agent
+if [ ! $? ]; then
+  eval `ssh-agent`
+fi
 
+if [ -n $1 ]; then
+  script=$1
+else
+  script=`uname -s | awk '{print tolower($0)}'`
+  if [ $script = linux ]; then
+    script=`lsb_release -is | awk '{print tolower($0)}'`
+  fi
+fi
+
+install=$HOME/.hovel/install/$script.sh
 if [ -e $install ]; then
-  echo "Running '$install'..." && sleep 5
+  echo "Running '$install'" && sleep 1
   sh $install
-
-  echo "Changing shell to '/usr/local/bin/fish'"
-  chsh -s /usr/local/bin/fish
 else
   echo "Couldn't find '$install' to run"
+fi
+
+newsh=`which fish`
+if [ $? -a $SHELL != $newsh ]; then
+  echo "Changing shell to '$newsh'"
+  chsh -s $newsh
 fi

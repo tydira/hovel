@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
-if [ -z `which brew` ]; then
+which brew
+if [ ! $? ]; then
   ruby -e "`curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install`"
 fi
 
@@ -16,7 +17,8 @@ brew install\
   fish\
   weechat
 
-if [ -z `which pip` ]; then
+which pip
+if [ ! $? ]; then
   alias pip="pip3"
 fi
 

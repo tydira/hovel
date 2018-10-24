@@ -1,27 +1,24 @@
 #!/usr/bin/env sh
 
-which doas
+which sudo
 if [ ! $? ]; then
-  echo "This script requires \`doas\` to install some tools."
+  echo "This script requires \`sudo\` to install some tools."
   exit 1
 fi
 
-doas pkg update
-doas pkg upgrade
-doas pkg install\
+wget -qO- https://deb.nodesource.com/setup_10.x | sudo -E bash -
+
+sudo apt update
+sudo apt upgrade
+sudo apt install -y\
   cmake\
-  python36 py36-pip\
-  node www/npm\
+  python3 python3-pip\
+  nodejs\
   tmux\
   fish\
   neovim\
   fzf\
   weechat
-
-which pip
-if [ ! $? ]; then
-  alias pip="pip-3.6"
-fi
 
 install=$HOME/.hovel/install/
 
