@@ -22,7 +22,7 @@ sudo apt install -y\
 
 which pip
 if [ ! $? ]; then
-  alias pip="pip-3.6"
+  alias pip="pip3"
 fi
 
 install=$HOME/.hovel/install/
