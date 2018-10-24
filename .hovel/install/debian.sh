@@ -20,6 +20,11 @@ sudo apt install -y\
   fzf\
   weechat
 
+which pip
+if [ ! $? ]; then
+  alias pip="pip-3.6"
+fi
+
 install=$HOME/.hovel/install/
 
 . $install/python.sh
