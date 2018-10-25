@@ -1,8 +1,7 @@
 #!/usr/bin/env sh
 
-which sudo
-if [ ! $? ]; then
-  echo "This script requires \`sudo\` to install some tools."
+if [ -z "$(which sudo)" ]; then
+  echo "This script requires 'sudo' to install some tools."
   exit 1
 fi
 
@@ -20,8 +19,7 @@ sudo apt install -y\
   fzf\
   weechat
 
-which pip
-if [ ! $? ]; then
+if [ -z "$(which pip)" ]; then
   alias pip="pip3"
 fi
 

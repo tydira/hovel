@@ -2,10 +2,8 @@
 
 url=https://sh.rustup.rs
 
-which rustup
-if [ ! $? ]; then
-  which curl
-  if [ $? ]; then
+if [ -z "$(which rustup)" ]; then
+  if [ -n "$(which curl)" ]; then
     curl $url -sSf | sh
   else
     wget -qO- $url | sh
@@ -14,15 +12,15 @@ fi
 
 . $HOME/.cargo/env
 
-rustup update
 rustup install nightly
+rustup update stable nightly
 rustup component add rust-src
 
 rustup run nightly cargo install --force\
   rustfmt-nightly\
   racer
 
-cargo install --force\
+cargo install\
   fd-find\
   ripgrep\
   exa

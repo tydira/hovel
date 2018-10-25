@@ -1,8 +1,7 @@
 #!/usr/bin/env sh
 
-which doas
-if [ ! $? ]; then
-  echo "This script requires \`doas\` to install some tools."
+if [ -z "$(which doas)" ]; then
+  echo "This script requires 'doas' to install some tools."
   exit 1
 fi
 
@@ -18,8 +17,7 @@ doas pkg install\
   fzf\
   weechat
 
-which pip
-if [ ! $? ]; then
+if [ -z "$(which pip)" ]; then
   alias pip="pip-3.6"
 fi
 
