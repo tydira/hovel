@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-url=https://sh.rustup.rs
+url="https://sh.rustup.rs"
 
 if [ -z "$(which rustup)" ]; then
   if [ -n "$(which curl)" ]; then
@@ -12,11 +12,15 @@ fi
 
 . $HOME/.cargo/env
 
-rustup install nightly
+rustup toolchain add nightly
 rustup update stable nightly
-rustup component add rust-src
 
-rustup run nightly cargo install --force\
+rustup component add --toolchain nightly\
+  rust-src\
+  rls-preview\
+  rust-analysis
+
+cargo +nightly install\
   rustfmt-nightly\
   racer
 
