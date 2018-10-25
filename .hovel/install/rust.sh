@@ -22,6 +22,7 @@ rustup component add --toolchain nightly\
   rust-analysis
 
 cargo +nightly install\
+  rustfmt-nightly\
   racer
 
 cargo install\
