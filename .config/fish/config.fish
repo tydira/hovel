@@ -1,5 +1,6 @@
 fish_vi_key_bindings
 
+set fish_term24bit 1
 set fish_user_paths $HOME/.cargo/bin $HOME/.local/bin
 set fish_greeting
 
