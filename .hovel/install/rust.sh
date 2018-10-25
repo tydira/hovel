@@ -15,13 +15,13 @@ fi
 rustup toolchain add nightly
 rustup update stable nightly
 
+rustup component add rust-src
 rustup component add --toolchain nightly\
   rust-src\
   rls-preview\
   rust-analysis
 
 cargo +nightly install\
-  rustfmt-nightly\
   racer
 
 cargo install\
