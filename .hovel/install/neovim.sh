@@ -6,4 +6,4 @@ if [ ! -d $nvc/autoload ]; then
   ln -s $nvc/vim-plug/plug.vim $nvc/autoload/
 fi
 
-nvim +PlugInstall +PlugUpdate +GoUpdateBinaries +qa
+nvim +PlugInstall +PlugUpdate +UpdateRemotePlugins +GoUpdateBinaries +qa
