@@ -16,7 +16,6 @@ if [ -z "$(pgrep ssh-agent)" ]; then
   eval $(ssh-agent) > /dev/null 2>&1
 fi
 
-echo $1
 if [ -n "$1" ]; then
   script=$1
 else
