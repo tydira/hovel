@@ -1,6 +1,11 @@
 #!/usr/bin/env sh
 
-# Lists, creates, and attaches tmux sessions.
+# List, create, and attach tmux sessions.
+
+if [ -z "`which tmux`" ]; then
+  echo error: no tmux command
+  exit 1
+fi
 
 if [ -z "$1" ]; then
   tmux list-sessions 2> /dev/null
