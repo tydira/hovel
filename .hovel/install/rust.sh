@@ -28,4 +28,5 @@ cargo +nightly install\
 cargo install\
   fd-find\
   ripgrep\
+  arcus\
   exa
