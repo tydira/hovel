@@ -56,7 +56,7 @@ font:
 
 colors:
   primary:
-    background: '0x151515'
+    background: '0x000000'
     foreground: '0xafafaf'
 
   normal:
