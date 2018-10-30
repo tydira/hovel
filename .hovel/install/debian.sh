@@ -17,7 +17,8 @@ sudo apt install -y\
   fish\
   neovim\
   fzf\
-  weechat
+  weechat\
+  rtorrent
 
 if [ -z "$(which pip)" ]; then
   alias pip="pip3"
