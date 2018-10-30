@@ -12,10 +12,22 @@ fi
 
 . $HOME/.cargo/env
 
-rustup toolchain add nightly
+if [ -z "$(rustup toolchain list | grep nightly)" ]; then
+  rustup toolchain add nightly
+fi
+
 rustup update stable nightly
 
-rustup component add rust-src
+rustup component add\
+  rust-src\
+  clippy-preview
+
+cargo install\
+  fd-find\
+  ripgrep\
+  arcus\
+  exa
+
 rustup component add --toolchain nightly\
   rust-src\
   rls-preview\
@@ -24,9 +36,3 @@ rustup component add --toolchain nightly\
 cargo +nightly install\
   rustfmt-nightly\
   racer
-
-cargo install\
-  fd-find\
-  ripgrep\
-  arcus\
-  exa
