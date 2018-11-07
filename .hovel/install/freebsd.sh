@@ -15,7 +15,8 @@ doas pkg install\
   fish\
   neovim\
   fzf\
-  weechat
+  weechat\
+  rtorrent
 
 if [ -z "$(which pip)" ]; then
   alias pip="pip-3.6"
