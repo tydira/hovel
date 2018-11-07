@@ -8,12 +8,13 @@ brew update
 brew upgrade
 brew install\
   cmake\
-  python3\
-  node\
-  neovim\
-  tmux\
-  fzf\
   fish\
+  fzf\
+  neovim\
+  nmap\
+  node\
+  python3\
+  tmux\
   weechat
 
 if [ -z "$(which pip)" ]; then

@@ -12,7 +12,7 @@ alias hovel='git --git-dir=$HOME/.hovel/repo.git --work-tree=$HOME'
 
 alias ls='exa'
 alias v='nvim'
-alias vs='nvim -S Session.vim'
+alias vs='nvim -S .session.vim'
 alias httpd='python -m SimpleHTTPServer 9000'
 
 alias g='git'

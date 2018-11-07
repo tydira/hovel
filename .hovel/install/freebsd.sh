@@ -9,14 +9,15 @@ doas pkg update
 doas pkg upgrade
 doas pkg install\
   cmake\
-  python36 py36-pip\
-  node www/npm\
-  tmux\
   fish\
-  neovim\
   fzf\
-  weechat\
-  rtorrent
+  neovim\
+  nmap\
+  node www/npm\
+  python36 py36-pip\
+  rtorrent\
+  tmux\
+  weechat
 
 if [ -z "$(which pip)" ]; then
   alias pip="pip-3.6"

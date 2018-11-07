@@ -1,5 +1,10 @@
 #!/usr/bin/env sh
 
+if [ "$(lsb_release -rs)" != "sid" ]; then
+  echo "This script is written for Debian Sid."
+  exit 2
+fi
+
 if [ -z "$(which sudo)" ]; then
   echo "This script requires 'sudo' to install some tools."
   exit 1
@@ -11,14 +16,15 @@ sudo apt update
 sudo apt upgrade
 sudo apt install -y\
   cmake\
-  python3 python3-pip\
-  nodejs\
-  tmux\
   fish\
-  neovim\
   fzf\
-  weechat\
-  rtorrent
+  neovim\
+  nmap\
+  nodejs\
+  python3 python3-pip\
+  rtorrent\
+  tmux\
+  weechat
 
 if [ -z "$(which pip)" ]; then
   alias pip="pip3"
