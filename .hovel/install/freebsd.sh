@@ -9,12 +9,13 @@ doas pkg update
 doas pkg upgrade
 doas pkg install\
   cmake\
-  python36 py36-pip\
-  node www/npm\
-  tmux\
   fish\
-  neovim\
   fzf\
+  neovim\
+  nmap\
+  node www/npm\
+  python36 py36-pip\
+  tmux\
   weechat
 
 if [ -z "$(which pip)" ]; then
