@@ -1,15 +1,15 @@
-dynamic_title: true
+dynamic_title: false
 hide_cursor_when_typing: true
 cursor_style: Block
 unfocused_hollow_cursor: true
 live_config_reload: true
 render_timer: false
-background_opacity: 0.965
+background_opacity: 0.9
 custom_cursor_colors: false
 tabspaces: 8
 
 env:
-  TERM: xterm-256color
+  TERM: tmux-256color-italic
 
 window:
   dimensions:
@@ -17,7 +17,7 @@ window:
     lines: 24
 
   padding:
-    x: 6
+    x: 9
     y: 6
 
   decorations: full
@@ -91,7 +91,7 @@ mouse:
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
-  save_to_clipboard: false
+  save_to_clipboard: true
 
 key_bindings:
   - { key: Space,    mods: Control, chars: "\x1b"                        }

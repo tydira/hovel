@@ -38,3 +38,5 @@ if [ $? -a "$SHELL" != "$newsh" ]; then
   echo "Changing shell to '$newsh'"
   chsh -s $newsh
 fi
+
+tic ~/.hovel/tmux-256color-italic.terminfo
