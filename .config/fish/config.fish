@@ -14,6 +14,7 @@ alias ls='exa'
 alias v='nvim'
 alias vs='nvim -S .session.vim'
 alias httpd='python -m SimpleHTTPServer 9000'
+alias mirror='wget --mirror --convert-links --adjust-extension --page-requisites --no-parent'
 
 alias g='git'
 alias ga='git add'
