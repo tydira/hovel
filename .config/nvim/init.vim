@@ -25,8 +25,8 @@ Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-bufword'
 Plug 'Raimondi/delimitMate'
-Plug 'sirver/ultisnips'
-Plug 'honza/vim-snippets'
+" Plug 'sirver/ultisnips'
+" Plug 'honza/vim-snippets'
 Plug 'haya14busa/vim-asterisk'
 Plug 'haya14busa/incsearch.vim'
 Plug 'gcmt/wildfire.vim'
@@ -42,6 +42,6 @@ Plug 'ncm2/ncm2-racer'
 Plug 'ncm2/ncm2-jedi'
 Plug 'sheerun/vim-polyglot'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', { 'do': './install.sh', 'for': ['typescript', 'typescript.tsx'] }
+Plug 'mhartington/nvim-typescript', { 'do': './install.sh \| UpdateRemotePlugins' }
 
 call plug#end()
