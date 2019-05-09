@@ -22,7 +22,7 @@ rustup component add\
   rust-src\
   clippy-preview
 
-cargo install\
+cargo install $*\
   fd-find\
   ripgrep\
   arcus\
@@ -33,6 +33,6 @@ rustup component add --toolchain nightly\
   rls-preview\
   rust-analysis
 
-cargo +nightly install\
+cargo +nightly install $*\
   rustfmt-nightly\
   racer
