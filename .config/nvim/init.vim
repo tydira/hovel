@@ -1,8 +1,9 @@
 call plug#begin(expand('<sfile>:p:h') . '/plugins')
 
 " Configuration
-Plug 'git@github.com:kroogs/vim-kroogs.git'
-Plug 'git@github.com:kroogs/vim-goshgolly.git'
+Plug 'git@github.com:tydira/vim-config.git'
+Plug 'git@github.com:tydira/vim-goshgolly.git'
+Plug 'git@github.com:tydira/vim-dawn.git'
 
 " Features
 Plug 'tpope/vim-commentary'
@@ -41,7 +42,6 @@ Plug 'racer-rust/vim-racer'
 Plug 'ncm2/ncm2-racer'
 Plug 'ncm2/ncm2-jedi'
 Plug 'sheerun/vim-polyglot'
-Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript', { 'do': './install.sh \| UpdateRemotePlugins' }
 
 call plug#end()
