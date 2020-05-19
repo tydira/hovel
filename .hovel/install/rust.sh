@@ -16,22 +16,29 @@ if [ -z "$(rustup toolchain list | grep nightly)" ]; then
   rustup toolchain add nightly
 fi
 
+rustup self update
 rustup update stable nightly
 
-rustup component add\
+rustup component add --toolchain stable\
   rust-src\
-  clippy-preview
-
-cargo install $*\
-  fd-find\
-  ripgrep\
-  arcus\
-  exa
+  rls\
+  clippy\
+  rust-analysis
 
 rustup component add --toolchain nightly\
   rust-src\
-  rls-preview\
+  rls\
+  clippy\
   rust-analysis
+
+cargo +stable install $*\
+  fd-find\
+  ripgrep\
+  pastel\
+  arcus\
+  exa\
+  rustfmt-nightly\
+  racer
 
 cargo +nightly install $*\
   rustfmt-nightly\
