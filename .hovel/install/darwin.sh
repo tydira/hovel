@@ -16,6 +16,9 @@ brew install\
   python3\
   tmux\
   weechat
+brew cask install\
+  alacritty\
+  docker
 
 if [ -z "$(which pip)" ]; then
   alias pip="pip3"
