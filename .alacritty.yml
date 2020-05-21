@@ -1,8 +1,6 @@
 dynamic_title: false
 live_config_reload: true
-render_timer: false
-background_opacity: 0.88
-tabspaces: 8
+background_opacity: 0.92
 
 cursor:
   style: Block
@@ -24,8 +22,6 @@ window:
 
 scrolling:
   history: 0
-  faux_multiplier: 0
-  auto_scroll: false
 
 font:
   normal:
@@ -40,7 +36,7 @@ font:
     family: Hack
     style: Italic
 
-  size: 12.0
+  size: 13.0
 
   offset:
     x: 0
