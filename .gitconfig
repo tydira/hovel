@@ -1,9 +1,9 @@
 [user]
-  name = Justin Krueger
-  email = justin@kroo.gs
+  name = Ty Dira
+  email = ty@dira.dev
 
 [github]
-  user = kroogs
+  user = tydira
 
 [core]
   editor = nvim
