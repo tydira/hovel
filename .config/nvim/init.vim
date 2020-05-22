@@ -3,7 +3,6 @@ call plug#begin(expand('<sfile>:p:h') . '/plugins')
 " Configuration
 Plug 'git@github.com:tydira/vim-config.git'
 Plug 'git@github.com:tydira/vim-goshgolly.git'
-Plug 'git@github.com:tydira/vim-dawn.git'
 
 " Features
 Plug 'tpope/vim-commentary'
@@ -33,6 +32,7 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'gcmt/wildfire.vim'
 Plug 'olical/vim-enmasse'
 Plug 'chrisbra/Colorizer'
+Plug 'RRethy/vim-illuminate'
 
 " Languages / Frameworks
 Plug 'moll/vim-node'
