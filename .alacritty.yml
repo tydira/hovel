@@ -1,6 +1,5 @@
-dynamic_title: false
 live_config_reload: true
-background_opacity: 0.92
+background_opacity: 1
 
 cursor:
   style: Block
@@ -10,6 +9,7 @@ env:
   TERM: tmux-256color-italic
 
 window:
+  dynamic_title: false
   dimensions:
     columns: 80
     lines: 24
@@ -58,8 +58,8 @@ font:
 #     red: "0xD7005F"
 #     green: "0x718C00"
 #     yellow: "0xD75F00"
-#     blue: "0x4271AE"
-#     magenta: "0x8959A8"
+#     blue: "0x679aff"
+#     magenta: "0xf94d94"
 #     cyan: "0x3E999F"
 #     white: "0x4D4D4C"
 #   bright:
@@ -67,8 +67,8 @@ font:
 #     red: "0xD7005F"
 #     green: "0x718C00"
 #     yellow: "0xD75F00"
-#     blue: "0x4271AE"
-#     magenta: "0x8959A8"
+#     blue: "0x679aff"
+#     magenta: "0xf94d94"
 #     cyan: "0x3E999F"
 #     white: "0xF5F5F5"
 
@@ -96,7 +96,7 @@ colors:
     cyan: "0x6ebfbe"
     white: "0xffffff"
 
-visual_bell:
+bell:
   duration: 0
 
 mouse_bindings:
