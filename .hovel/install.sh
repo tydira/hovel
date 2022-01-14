@@ -2,13 +2,15 @@
 
 cd $HOME
 
-alias hovel="git --git-dir=.hovel/repo.git --work-tree=."
+alias hovel="git --git-dir=.hovel/repo.git --work-tree=$HOME"
 
-hovel config --local status.showUntrackedFiles no
-hovel submodule update --init
+repo config --local --unset core.bare
+repo config --local core.worktree $HOME
+repo config --local status.showUntrackedFiles no
+repo submodule update --init
 
 if [ -e "README.md" ]; then
-  hovel update-index --assume-unchanged README.md
+  repo update-index --assume-unchanged README.md
   mv README.md .hovel/
 fi
 
