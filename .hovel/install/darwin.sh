@@ -6,18 +6,28 @@ fi
 
 brew update
 brew upgrade
+
 brew install\
+  bat\
   cmake\
+  eth-p/software/bat-extras\
   fish\
   fzf\
+  ipfs\
   neovim\
   nmap\
   node\
   python3\
+  ripgrep\
   tmux\
-  weechat
+  weechat\
+  wget\
+  youtube-dl\
+  thefuck
+
 brew cask install\
   alacritty\
+  google-chrome\
   docker
 
 if [ -z "$(which pip)" ]; then
