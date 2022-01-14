@@ -3,7 +3,7 @@ function fish_prompt
 
   which arcus > /dev/null 2>&1
   if test $status -a -n "$fish_color_cwd_fade_to"
-    set_color -i
+    set_color -io
     echo -n $prompt | arcus $fish_color_cwd $fish_color_cwd_fade_to
     set_color normal
   else
