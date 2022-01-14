@@ -2,8 +2,8 @@
   name = Ty Dira
   email = ty@dira.dev
 
-[github]
-  user = tydira
+; [github]
+;   user = tydira
 
 [core]
   editor = nvim
@@ -31,3 +31,6 @@
 
 [diff]
   tool = vimdiff
+
+[init]
+	defaultBranch = trunk
