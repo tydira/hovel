@@ -12,34 +12,28 @@ fi
 
 . $HOME/.cargo/env
 
-if [ -z "$(rustup toolchain list | grep nightly)" ]; then
-  rustup toolchain add nightly
-fi
+# if [ -z "$(rustup toolchain list | grep nightly)" ]; then
+#   rustup toolchain add nightly
+# fi
 
 rustup self update
-rustup update stable nightly
+# rustup update stable nightly
+rustup update stable
 
 rustup component add --toolchain stable\
-  rust-src\
-  rls\
+  rustfmt\
   clippy\
-  rust-analysis
-
-rustup component add --toolchain nightly\
-  rust-src\
-  rls\
-  clippy\
-  rust-analysis
+  rust-src
 
 cargo +stable install $*\
+  cargo-edit\
+  wasm-pack\
   fd-find\
-  ripgrep\
   pastel\
   arcus\
-  exa\
-  rustfmt-nightly\
-  racer
+  bat\
+  exa
 
-cargo +nightly install $*\
-  rustfmt-nightly\
-  racer
+# cargo +nightly install $*\
+#   rustfmt-nightly\
+#   racer
