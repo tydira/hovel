@@ -1,0 +1,24 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "svelte",
+    "rust",
+    "typescript",
+    "typescriptreact",
+    "javascript",
+    "json",
+    "jsonc",
+    "html",
+    "css",
+    "scss"
+  ],
+  "eslint.packageManager": "pnpm",
+  "css.validate": false,
+  "suggest.maxCompleteItemCount": 21,
+  "prettier.onlyUseLocalVersion": true,
+  "git.enableGutters": false,
+  "diagnostic.errorSign": "‣",
+  "diagnostic.warningSign": "・",
+  "diagnostic.infoSign": "・",
+  "diagnostic.hintSign": "・",
+  "rust-analyzer.lens.enable": false
+}
