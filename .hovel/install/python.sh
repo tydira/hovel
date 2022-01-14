@@ -5,3 +5,6 @@ pip install --user --upgrade\
   virtualenv\
   neovim\
   flake8
+  # twint\
+  # ipwb\
+  # pandas
