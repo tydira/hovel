@@ -3,7 +3,7 @@ call plug#begin(expand('<sfile>:p:h') . '/plugins')
 " Configuration
 Plug 'git@github.com:tydira/vim-config.git'
 Plug 'git@github.com:tydira/vim-goshgolly.git'
-Plug 'git@github.com:tydira/vim-goshdawn.git'
+" Plug 'git@github.com:tydira/vim-goshdawn.git'
 
 " Features
 Plug 'tpope/vim-commentary'
