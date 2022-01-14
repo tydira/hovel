@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+if [ -z "$1" ]; then
+  GIT_DIR=$HOME/.hovel/repo.git nvim -c "Git" -c "1quit"
+else
+  git --git-dir=$HOME/.hovel/repo.git "$@"
+fi
